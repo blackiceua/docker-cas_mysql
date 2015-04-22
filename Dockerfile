@@ -69,6 +69,6 @@ EXPOSE 8443
 CMD chmod 1777 /tmp; \
 	mysqld_safe & \
 	service apache2 start; \
-	[ ! -f /usr/share/tomcat7/.keystore ] && printf tomcat_admin\\ntomcat_admin\\n\\n\\n\\n\\n\\n\\ny\\ntomcat_admin\\ntomcat_admin\\n | keytool -genkey -alias tomcat -keyalg RSA -keystore /usr/share/tomcat7/.keystore; \
+	[ ! -f /usr/share/tomcat7/.keystore ] && printf tomcat_admin\\ntomcat_admin\\nlocalhost\\nlocalhost\\nlocalhost\\nlocalhost\\nlocalhost\\nlocalhost\\ny\\ntomcat_admin\\ntomcat_admin\\n | keytool -genkey -alias tomcat -keyalg RSA -keystore /usr/share/tomcat7/.keystore; \
 	service tomcat7 start; \
 	/usr/sbin/sshd -D
